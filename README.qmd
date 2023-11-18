@@ -1,0 +1,35 @@
+---
+title: "Performance of Health Care Service Area Definitions for Capturing Variation in Inpatient Care and Social Determinants of Health"
+subtitle: "Methodological Replication Materials"
+format: html
+---
+
+# Introduction
+
+This file provides replciation code for the methods outlined in the arcticle,"Performance of Health Care Service Area Definitions for Capturing Variation in Inpatient Care and Social Determinants of Health." 
+
+# Data
+
+## Geographic Data
+
+## Dartmouth Shapefiles
+
+[HRR](https://data.dartmouthatlas.org/downloads/geography/HRR_Bdry__AK_HI_unmodified.zip)
+[HSA](https://data.dartmouthatlas.org/downloads/geography/HSA_Bdry__AK_HI_unmodified.zip)
+
+### ZIP Code Centroids
+
+### HSAs
+
+## Isochrones
+
+The file `get-mapbox-isochrones.r` provides a function that obtains and tidys the geographic boundaries of an isochrone around any latitude and longitude point. 
+
+## Patient Flow Data
+
+## Social Determinants of Health Data
+
+
+
+
+

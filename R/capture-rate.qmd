@@ -1,7 +1,7 @@
 ---
 title: "Performance of Health Care Service Area Definitions for Capturing Variation in Inpatient Care and Social Determinants of Health"
 subtitle: "Methodological Replication Materials"
-format: html
+format: pdf
 editor_options: 
   chunk_output_type: console
 execute: 
@@ -30,6 +30,10 @@ state = "TN"
 # turn messages off
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
+
+
+This repository provides replciation code for the methods outlined in the arcticle,"Performance of Health Care Service Area Definitions for Capturing Variation in Inpatient Care and Social Determinants of Health." Due to data restricted by DUAs and software licences in the original study, this code draws exclusively on publicly avaialble data to replicate the methods used to determine capture rates within a geographic health care service area (HCSA).
+
 
 ## Geographic Data
 
@@ -268,7 +272,7 @@ if (!file.exists(here("output/edge-lists/edge-list.rds"))) {
               call2 = glue("{call}&offset={offset}")
               json_data_ <-
                 bind_rows(json_data, fromJSON(call2))
-              if (nrow(json_data_) < (nrow(json_data) + offset)) {
+              if (nrow(json_data_) < (nrow(json_data) + 1000)) {
                 df_ <- json_data_ %>%
                   filter(!grepl("\\*", TOTAL_DAYS_OF_CARE)) %>%
                   janitor::clean_names()
